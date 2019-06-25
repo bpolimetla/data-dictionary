@@ -1,0 +1,14 @@
+tr.row0 td {
+	background-color: #FFFFFF; color: black;
+}
+tr.row1 td {
+	background-color: #CCE6FF; color: black;
+}
+
+tr.head1 td {
+	background-color: #99CCFF; color: black;
+}
+
+tr.head_fk td {
+	background-color: #CCFFFF; color: black;
+}

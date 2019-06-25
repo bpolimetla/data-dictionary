@@ -1,0 +1,43 @@
+Project Name: Data Dictionary Generator
+Author: Bhavani P Polimetla
+Date: Dec-25-2010
+
+These commands are used during development time.
+==============================================================================================
+set M2_HOME=D:\software\apache-maven-2.2.1
+set JAVA_HOME=D:\software\jdk1.6.0_21
+set path=%M2_HOME%\bin;%JAVA_HOME%\bin;%path%;
+set MAVEN_OPTS=-Xmx1024m -Xms512m
+set JAVA_OPTS=-Xmx1024m -Xms512m
+==============================================================================================
+
+--This is only one time
+>mvn archetype:create -DarchetypeGroupId=org.apache.maven.archetypes -DgroupId=com.ddgen.datadictionary -DartifactId=DDGen
+
+>cd DDGen
+
+>mvn eclipse:eclipse
+
+==============================================================================================
+
+mvn clean -DskipTests=true install 
+
+mvn -DskipTests=true install 
+
+mvn install -Dtest=IndvlDataTransferTest
+
+mvn dependency:copy-dependencies
+mvn dependency:tree
+
+==================================== RUN In Dev System ====================================
+
+java -jar DDGen.jar all false
+
+java com.ddgen.datadictionary.DDGen all false
+
+
+==================================== run from eclipse ====================================
+Copy these files to pom.xml location and run the main program DDGen.java
+DDGen.properties
+log4j.properties
+============================================================================================
